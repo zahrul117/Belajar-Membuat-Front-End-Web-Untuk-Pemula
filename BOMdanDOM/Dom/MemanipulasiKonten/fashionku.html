@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fashionku</title>
+    <style>
+      .produk {
+        border: 1px solid gray;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+      }
+
+      .promo {
+        color: red;
+        font-weight: bold;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Fashionku</h1>
+    <p id="promoText" class="promo">Promo Spesial Hari Ini!</p>
+
+    <div class="produk" id="produk1">
+      <h3>Kaos Polos</h3>
+      <p id="deskripsi1">Baju kaos polos berkualitas tinggi.</p>
+      <button>Beli Sekarang</button>
+    </div>
+
+    <div class="produk" id="produk2">
+      <h3>Topi Trendi</h3>
+      <p id="deskripsi2">Topi kekinian untuk gaya kamu.</p>
+      <button>Beli Sekarang</button>
+    </div>
+
+    <script>
+      // Diisi pada bagian latihan
+      //     Gunakan innerText untuk mengubah teks heading <h1> menjadi:
+      // 🛍️ Selamat Datang di Fashionku!
+      const judul = document.getElementById("judul");
+      judul.innerText = "Selamat Datang di Fashionku";
+
+      //   Gunakan innerHTML untuk mengganti isi <p id="promoText"> menjadi:
+      //     <b>Diskon sampai 50%! Cek sekarang juga!</b>
+      const promo = document.getElementById("promoText");
+      promo.innerHTML = "<b>Diskon sampai 50%! Cek sekarang juga! </b>";
+
+      //Gunakan innerText untuk mengubah deskripsi produk pertama (id="deskripsi1") menjadi:
+      // "Kaos polos nyaman, tersedia dalam berbagai warna."
+      const deskripsi = document.getElementById("deskripsi1");
+      deskripsi.innerText = "Kaos polos nyaman, tersedia dalam berbagai warna";
+
+      //       Gunakan style.property untuk:
+      // Mengubah background produk produk1 menjadi kuning muda (#fff9c4)
+      // Mengubah font color produk produk2 menjadi biru (#1976d2)
+      const produk1 = document.getElementById("produk1");
+      produk1.style.backgroundColor = "#fff9c4";
+      const produk2 = document.getElementById("produk2");
+      produk2.style.color = "#1976d2";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      // Buat elemen <h2> dengan teks "Daftar Pemain Barcelona 2025", lalu tambahkan ke dalam elemen dengan id="output".
+      const daftar = document.createElement("h2");
+      daftar.innerText = "Daftar Pemain Barcelona 2025";
+      document.getElementById("output").appendChild(daftar);
+
+      //   Buat elemen <ul>, lalu tambahkan 3 <li> di dalamnya dengan nama pemain favoritmu di Barcelona. Contoh: "Pedri", "Gavi", "Lamine Yamal". Tambahkan <ul> ini ke elemen dengan id output.
+      const listPemain = document.createElement("ul");
+      namaPemain = ["Pedri", "Gavi", "Lamine Yamal"];
+      for (nama of namaPemain) {
+        const item = document.createElement("li");
+        item.innerText = `${nama}`;
+        listPemain.appendChild(item);
+      }
+      document.getElementById("output").appendChild(listPemain);
+
+      /*Buat elemen <img> yang menampilkan logo FC Barcelona. URL logo:
+https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg
+Tambahkan atribut alt dengan nilai "Logo Barcelona". Tambahkan ke document.body.*/
+      const logo = document.createElement("img");
+      logo.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+      );
+      logo.setAttribute("alt", "Logo Barcelona");
+      document.body.appendChild(logo);
+
+      //   Buat elemen <p> dengan teks "Visca Barça i Visca Catalunya!", dan warnai teks ini dengan biru tua (darkblue). Tambahkan ke halaman.
+      const teks = document.createElement("p");
+      teks.innerText = "Visca Barca i Visca Catalunya";
+      teks.style.color = "darkblue";
+      document.body.appendChild(teks);
+
+      /*Buat elemen <a> (link) yang mengarah ke situs resmi:
+https://www.fcbarcelona.com/
+Teks: "Kunjungi Situs Resmi Barcelona"
+Tambahkan ke dalam body.
+*/
+      const link = document.createElement("a");
+      link.innerText = "Kunjungi situs resmi Barcelona";
+      link.setAttribute("href", "https://www.fcbarcelona.com/");
+      document.body.appendChild(link);
+    </script>
+  </body>
+</html>

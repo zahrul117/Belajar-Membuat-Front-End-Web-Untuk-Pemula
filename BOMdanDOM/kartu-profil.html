@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kartu Profil</title>
+    <style>
+      .card {
+        width: 200px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        text-align: center;
+      }
+      .button-group button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        id="gambar1"
+        src="https://via.placeholder.com/100"
+        alt="Karakter 1"
+      />
+      <h4>Karakter 1</h4>
+      <div class="button-group">
+        <button onclick="zoomIn('gambar1')">Zoom In</button>
+        <button class="lihat-detail">Lihat Detail</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        id="gambar2"
+        src="https://via.placeholder.com/100"
+        alt="Karakter 2"
+      />
+      <h4>Karakter 2</h4>
+      <div class="button-group">
+        <button onclick="zoomIn('gambar2')">Zoom In</button>
+        <button class="lihat-detail">Lihat Detail</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        id="gambar3"
+        src="https://via.placeholder.com/100"
+        alt="Karakter 3"
+      />
+      <h4>Karakter 3</h4>
+      <div class="button-group">
+        <button onclick="zoomIn('gambar3')">Zoom In</button>
+        <button class="lihat-detail">Lihat Detail</button>
+      </div>
+    </div>
+
+    <script>
+      // Fungsi memperbesar gambar
+      function zoomIn(idGambar) {
+        const gambar = document.getElementById(idGambar);
+        gambar.setAttribute("width", 150);
+        gambar.setAttribute("height", 150);
+      }
+
+      // Menonaktifkan tombol "Lihat Detail" pada kartu ke-3
+      const detailButtons = document.querySelectorAll(".lihat-detail");
+      const tombolKetiga = detailButtons[2]; // indeks ke-2
+      tombolKetiga.setAttribute("disabled", true);
+      tombolKetiga.setAttribute(
+        "style",
+        "background-color: red; color: white;"
+      );
+    </script>
+  </body>
+</html>

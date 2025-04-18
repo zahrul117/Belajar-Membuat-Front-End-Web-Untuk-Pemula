@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Visca Barcaa</h1>
+
+    <script>
+      // membuat elemen p tentang barcelona
+      const info = document.createElement("p");
+      info.innerText =
+        "Barcelona adalah klub sepakbola asal spanyol yang berdiri pada tahun 1899";
+      document.body.appendChild(info);
+      //   menambahkan info tebal menggunakan innerHTML
+      const motto = document.createElement("p");
+      motto.innerHTML = "<b> Mes que un club </b> - Lebih dari sekedar klub";
+      document.body.appendChild(motto);
+
+      //   menambahkan gambar logo fc barcelona
+      const logo = document.createElement("img");
+      logo.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+      );
+      logo.setAttribute("alt", "Logo FC Barcelona");
+      logo.setAttribute("width", "150");
+      document.body.appendChild(logo);
+    </script>
+  </body>
+</html>

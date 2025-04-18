@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Latihan setAttribute</title>
+    <style>
+      .button {
+        margin: 10px;
+      }
+      button {
+        padding: 8px 16px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Daftar Film</h2>
+    <img id="poster" src="https://via.placeholder.com/100" alt="Poster Film" />
+    <div class="button">
+      <button>Mainkan</button>
+    </div>
+    <div class="button">
+      <button>Detail</button>
+    </div>
+    <div class="button">
+      <button>Download</button>
+    </div>
+    <div class="button">
+      <button>Coming Soon</button>
+    </div>
+
+    <script>
+      // Tulis jawabanmu di sini
+      const poster = document.getElementById("poster");
+      poster.setAttribute("width", 250);
+      poster.setAttribute("height", 350);
+
+      const tombol = document.querySelectorAll(".button");
+      const tombolComingSoon = tombol[3];
+      const comingSoon = tombolComingSoon.children[0];
+      comingSoon.setAttribute("type", "submit");
+      comingSoon.setAttribute("disabled", true);
+      comingSoon.style.backgroundColor = "gray";
+      comingSoon.style.color = "white";
+    </script>
+  </body>
+</html>

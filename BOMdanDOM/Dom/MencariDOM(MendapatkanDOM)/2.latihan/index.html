@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="judul">Halo Dunia!</h1>
+    <button class="btn">Simpan</button>
+    <button class="btn">Hapus</button>
+    <input type="radio" name="gender" value="pria" />
+    <input type="radio" name="gender" value="wanita" />
+    <div class="kotak">A</div>
+    <div class="kotak">B</div>
+    <div class="kotak">C</div>
+    <p>Paragraf 1</p>
+    <p>paragraf 2</p>
+    <p>paragraf 3</p>
+    <script>
+      // nomor 1
+      const judul = document.getElementById("judul");
+      console.log(judul.textContent);
+
+      //   nomor2
+      const button = document.querySelectorAll(".btn");
+      for (btn of button) {
+        console.log(btn);
+      }
+
+      //   nomor 3
+      const radio = document.getElementsByName("gender");
+      for (let item of radio) {
+        console.log(item.value);
+      }
+
+      //   nomor 4
+      const kotakPertama = document.querySelector(".kotak");
+      console.log(kotakPertama.textContent);
+      const semuaKotak = document.querySelectorAll(".kotak");
+      semuaKotak.forEach((item) => {
+        console.log(item.textContent);
+      });
+
+      //nomor 5
+      const paragraf = document.getElementsByTagName("p");
+      console.log(paragraf[0]);
+      console.log(paragraf[1]);
+      console.log(paragraf[2]);
+    </script>
+  </body>
+</html>
