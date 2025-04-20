@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="ganti">Ganti background</button>
+    <script>
+      const ganti = document.getElementById("ganti");
+      const body = document.body;
+      ganti.addEventListener("click", function () {
+        const flag = true;
+        if (flag) {
+          body.style.backgroundColor = "black";
+        } else {
+          body.style.backgroundColor = "white";
+        }
+        flag = !flag;
+      });
+    </script>
+  </body>
+</html>

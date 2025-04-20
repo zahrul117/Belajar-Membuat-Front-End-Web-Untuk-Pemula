@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Silahkan Login</h2>
+    <button id="loginBtn">Login</button>
+    <div id="message"></div>
+
+    <script>
+      const userLogin = new Event("userlogin");
+
+      const loginBtn = document.getElementById("loginBtn");
+      const messageDiv = document.getElementById("message");
+
+      loginBtn.addEventListener("userlogin", function () {
+        messageDiv.textContent = "Selamat Anda Berhasil Login";
+      });
+
+      loginBtn.addEventListener("click", function () {
+        console.log("Tombol login diklik");
+        loginBtn.dispatchEvent(userLogin);
+      });
+    </script>
+  </body>
+</html>

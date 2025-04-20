@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="ubah">Ubah Warna</button>
+    <p id="pesan"></p>
+
+    <script>
+      const ubah = document.getElementById("ubah");
+      const pesan = document.getElementById("pesan");
+      const ubahWarnaEvent = new Event("ubahWarna");
+
+      pesan.addEventListener("ubahWarna", function () {
+        pesan.textContent = "Warna berhasil diubah";
+        document.body.style.backgroundColor = "green";
+      });
+
+      ubah.addEventListener("click", function () {
+        pesan.dispatchEvent(ubahWarnaEvent);
+      });
+    </script>
+  </body>
+</html>

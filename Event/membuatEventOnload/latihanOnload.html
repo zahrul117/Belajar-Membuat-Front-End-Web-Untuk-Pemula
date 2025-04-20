@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to FC Barcelona</h1>
+    <p>Selamat datang di halaman penggemar barca</p>
+    <img
+      id="logo"
+      src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+      alt=""
+      hidden
+    />
+    <script>
+      function showContent() {
+        alert("Halo Culer! Konten sudah siap ditampilkan");
+        const logo = document.getElementById("logo");
+        logo.removeAttribute("hidden");
+      }
+      document.body.onload = showContent;
+    </script>
+  </body>
+</html>

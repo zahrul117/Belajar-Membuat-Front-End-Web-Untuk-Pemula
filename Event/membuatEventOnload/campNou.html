@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc7NouSCxuEIrbelNUvpLqRKDY4_r1EHfh5g&s"
+      alt=""
+      hidden
+    />
+    <p id="paragraf" hidden>Selamat datang di stadion CampNou</p>
+
+    <script>
+      function tampilkanKonten() {
+        alert("Selamat datang di stadion camp nou, culer!");
+        const gambar = document.getElementsByTagName("img")[0];
+        gambar.removeAttribute("hidden");
+        const teks = document.querySelector("p");
+        teks.removeAttribute("hidden");
+      }
+      document.body.onload = tampilkanKonten;
+    </script>
+  </body>
+</html>

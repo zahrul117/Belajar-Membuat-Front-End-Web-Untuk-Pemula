@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://www.gramedia.com/blog/content/images/2024/06/65695c5d0e63d.jpeg"
+      alt=""
+      id="gambar"
+    />
+    <button>Sembunyikan Gambar</button>
+    <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        document.getElementById("gambar").style.display = "none";
+      });
+    </script>
+  </body>
+</html>

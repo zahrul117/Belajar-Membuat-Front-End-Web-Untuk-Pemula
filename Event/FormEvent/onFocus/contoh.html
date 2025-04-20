@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contoh onFocus dan onBlur</title>
+    <style>
+      #pesan {
+        visibility: hidden;
+        color: blue;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Formulir Nama</h2>
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" maxlength="20" />
+    <p id="pesan">Silakan isi nama kamu. Maksimal 20 karakter.</p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputNama = document.getElementById("nama");
+        const pesan = document.getElementById("pesan");
+
+        // Ketika input mendapat fokus
+        inputNama.addEventListener("focus", function () {
+          console.log("Input mendapatkan fokus");
+          pesan.style.visibility = "visible";
+        });
+
+        // Ketika input kehilangan fokus
+        inputNama.addEventListener("blur", function () {
+          console.log("Input kehilangan fokus");
+          pesan.style.visibility = "hidden";
+        });
+      });
+    </script>
+  </body>
+</html>

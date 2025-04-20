@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center; padding: 50px">
+    <h1>FC Barcelona Theme Switcher</h1>
+    <p>Tekan tombol untuk mengganti warna latar belakang stadion</p>
+    <button id="changeColorButton">Ganti Warna</button>
+
+    <script>
+      const colors = ["#004d98", "#A50044", "#ffd700", "#ffffff"];
+      let index = 0;
+
+      function gantiWarna() {
+        document.body.style.backgroundColor = colors[index];
+        index = (index + 1) % colors.length;
+      }
+      document.getElementById("changeColorButton").onclick = gantiWarna;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+      }
+      .container {
+        max-width: 400px;
+        margin: auto;
+      }
+      #outputPendaftaran {
+        margin-top: 20px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Formulir Pendaftaran Kursus</h2>
+      <form action="" id="formKursus">
+        <label for="nama">Nama Lengkap</label><br />
+        <input type="text" id="nama" name="nama" required /><br /><br />
+
+        <label for="kursus">Pilih Kursus</label>
+        <select name="kursus" id="kursus" required>
+          <option value="">--pilih--</option>
+          <option value="HTML">HTML Dasar</option>
+          <option value="CSS">CSS Menengah</option>
+          <option value="JavaScript">JavaScript Lanjutan</option></select
+        ><br /><br />
+        <input type="submit" value="Daftar Sekarang" />
+      </form>
+      <div id="outputPendaftaran"></div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>

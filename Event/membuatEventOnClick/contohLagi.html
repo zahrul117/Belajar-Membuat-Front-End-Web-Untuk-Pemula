@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lineup Barcelona Hari Ini</title>
+  </head>
+  <body>
+    <h1>🔵🔴 Lineup Barcelona Hari Ini</h1>
+
+    <p id="jumlahPemain">Jumlah pemain: 0</p>
+
+    <ul id="daftarPemain"></ul>
+
+    <button id="tambahBtn">Tambahkan Pemain</button>
+
+    <h3 id="kejutan" hidden>🎉 Lineup Lengkap! Vamos Barca! 💙❤️</h3>
+
+    <script>
+      const pemainBarca = ["Ter Stegen", "Kounde", "Gavi", "Fermín López"];
+      let index = 0;
+
+      const daftarPemain = document.getElementById("daftarPemain");
+      const jumlahPemain = document.getElementById("jumlahPemain");
+      const tombol = document.getElementById("tambahBtn");
+      const kejutan = document.getElementById("kejutan");
+
+      tombol.onclick = function () {
+        if (index < pemainBarca.length) {
+          const li = document.createElement("li");
+          li.textContent = pemainBarca[index];
+          daftarPemain.appendChild(li);
+
+          index++;
+          jumlahPemain.innerText = "Jumlah pemain: " + index;
+
+          if (index === pemainBarca.length) {
+            kejutan.removeAttribute("hidden");
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

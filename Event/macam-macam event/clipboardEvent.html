@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Coba salin, potong, atau tempel sesuatu di bawah ini</h2>
+    <textarea name="" id="textarea" rows="5" cols="30">
+Tulis sesuati di sini</textarea
+    >
+    <p id="info"></p>
+    <script>
+      // Mendapatkan teks dari textarea
+      const textarea = document.getElementById("textarea");
+      const info = document.getElementById("info");
+
+      textarea.addEventListener("copy", function () {
+        info.textContent = "Teks telah disalin";
+      });
+
+      textarea.addEventListener("cut", function () {
+        info.textContent = "Kamu baru memotong teks";
+      });
+
+      textarea.addEventListener("paste", function () {
+        info.textContent = "Kamu baru saja menempelkan teks";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilih Pemain Barca</title>
+    <style>
+      img {
+        width: 150px;
+        margin: 10px;
+        transition: border 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daftar Pemain FC Barcelona</h1>
+    <p>Pilih pemain favoritmu, Culer!</p>
+
+    <div>
+      <img
+        id="pedri"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0GD9M-ovLMDfdq0Zjn81hWwEa0U15Qq58Ew&s"
+        alt="Pedri"
+        onmouseover="beriBorder('pedri')"
+      />
+      <br />
+      <button onclick="pilihPemain('Pedri')">Pilih Pedri</button>
+    </div>
+
+    <div>
+      <img
+        id="lewa"
+        src="https://pbs.twimg.com/media/FpaaZhOaAAAFiuA.jpg:large"
+        alt="Lewandowski"
+        onmouseover="beriBorder('lewa')"
+      />
+      <br />
+      <button onclick="pilihPemain('Lewandowski')">Pilih Lewandowski</button>
+    </div>
+
+    <script>
+      function showWelcome() {
+        alert("Selamat datang di Halaman Pemain FC Barcelona!");
+      }
+
+      function pilihPemain(nama) {
+        alert("Kamu memilih " + nama + "!");
+      }
+
+      function beriBorder(idGambar) {
+        const img = document.getElementById(idGambar);
+        img.style.border = "3px solid blue";
+      }
+
+      document.body.onload = showWelcome;
+    </script>
+  </body>
+</html>

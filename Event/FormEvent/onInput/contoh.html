@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contoh onInput Sederhana</title>
+  </head>
+  <body>
+    <h3>Ketik nama kamu:</h3>
+    <input type="text" id="namaInput" placeholder="Nama kamu..." />
+
+    <p>Halo, <span id="outputNama">...</span></p>
+
+    <script>
+      const input = document.getElementById("namaInput");
+      const output = document.getElementById("outputNama");
+
+      input.addEventListener("input", function () {
+        output.textContent = input.value;
+      });
+    </script>
+  </body>
+</html>

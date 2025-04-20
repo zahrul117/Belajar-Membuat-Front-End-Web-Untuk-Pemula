@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Event Listener</title>
+    <style>
+      #output {
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Masukkan Nama Kamu:</h2>
+    <input type="text" id="namaInput" placeholder="Nama kamu..." />
+    <button id="tampilkanBtn">Tampilkan Nama</button>
+    <button id="ubahWarnaBtn">Ubah Warna Teks</button>
+
+    <p id="output"></p>
+
+    <script>
+      const inputNama = document.getElementById("namaInput");
+      const tampilkanBtn = document.getElementById("tampilkanBtn");
+      const ubahWarnaBtn = document.getElementById("ubahWarnaBtn");
+      const output = document.getElementById("output");
+
+      // Tampilkan nama saat tombol diklik
+      tampilkanBtn.addEventListener("click", function () {
+        const nama = inputNama.value;
+        if (nama) {
+          output.innerText = "Halo, " + nama + "!";
+        } else {
+          output.innerText = "Silakan isi namamu dulu.";
+        }
+      });
+
+      // Ubah warna teks saat tombol diklik
+      ubahWarnaBtn.addEventListener("click", function () {
+        output.style.color = "purple";
+      });
+    </script>
+  </body>
+</html>

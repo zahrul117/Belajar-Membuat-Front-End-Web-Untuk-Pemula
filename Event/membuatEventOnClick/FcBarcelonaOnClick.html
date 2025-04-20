@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Pemain FC Barcelona</title>
+  </head>
+  <body>
+    <h1>Tambah Pemain FC Barcelona</h1>
+
+    <button id="tambahBtn">Tambah Pemain</button>
+    <button id="gantiBtn">Ganti Nama Terakhir</button>
+
+    <ul id="daftarPemain"></ul>
+
+    <div id="kejutan" hidden>
+      <h3>Tim Siap Bertanding!</h3>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+        width="100"
+        alt="Logo Barca"
+      />
+    </div>
+
+    <script>
+      // Tulis kodenya di sini ya
+      //   soal nomor 1
+      let daftarPemain = document.getElementById("daftarPemain");
+      const Pemain = ["Pedri", "Lamine Yamal", "Lewandowski", "Araujo"];
+      let index = 0;
+      function tambahPemain() {
+        index = (index + 1) % Pemain.length;
+        let namaPemain = Pemain[index];
+        let li = document.createElement("li");
+        li.textContent = namaPemain;
+        daftarPemain.appendChild(li);
+      }
+      document.getElementById("tambahBtn").onclick = tambahPemain;
+    </script>
+  </body>
+</html>

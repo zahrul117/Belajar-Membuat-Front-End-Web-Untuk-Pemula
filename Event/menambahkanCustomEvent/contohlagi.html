@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="judul">Hello</h2>
+    <button id="tombol">Klik untuk ubah judul</button>
+
+    <script>
+      const gantiJudul = new Event("gantiJudul");
+
+      const judul = document.getElementById("judul");
+      const tombol = document.getElementById("tombol");
+
+      judul.addEventListener("gantiJudul", function () {
+        judul.innerText = "Judul sudah Diganti";
+      });
+      tombol.addEventListener("click", function () {
+        judul.dispatchEvent(gantiJudul);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>selamat Datang</p>
+    <button id="btn">tekan ini</button>
+
+    <script>
+      const btn = document.getElementById("btn");
+      const paragraf = document.querySelector("p");
+      btn.addEventListener("click", function () {
+        paragraf.textContent = "Warna telah berubah";
+        paragraf.style.color = "blue";
+      });
+    </script>
+  </body>
+</html>

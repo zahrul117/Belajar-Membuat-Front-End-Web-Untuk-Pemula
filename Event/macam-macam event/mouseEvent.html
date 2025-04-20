@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Coba interaksi dengan tombol di bawah ini</h2>
+    <button id="tombol">Klik Aku!</button>
+    <p id="hasil"></p>
+
+    <script>
+      const tombol = document.getElementById("tombol");
+      const hasil = document.getElementById("hasil");
+
+      tombol.addEventListener("click", function () {
+        hasil.textContent = "Kamu mengklik tombol";
+      });
+
+      tombol.addEventListener("dblclick", function () {
+        hasil.textContent = "Kamu melakukan double-click";
+      });
+
+      tombol.addEventListener("mouseover", function () {
+        hasil.textContent = "Kursor berada di atas tombol";
+      });
+    </script>
+  </body>
+</html>

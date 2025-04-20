@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="teks">klik tombol untuk ubah warna saya!</p>
+    <button id="btn">Ubah Warna</button>
+
+    <script>
+      const teks = document.getElementById("teks");
+      const tombol = document.getElementById("btn");
+
+      tombol.addEventListener("click", function () {
+        teks.style.color = "blue";
+      });
+
+      //   tombol.onclick = function () {
+      //     teks.style.color = "red";
+      //   };
+    </script>
+  </body>
+</html>

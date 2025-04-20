@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #e50044;
+        color: white;
+      }
+      img {
+        width: 200px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FC Barcelona</h1>
+    <p class="info">Mes que un club</p>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+      alt="FC Barcelona Logo"
+      hidden
+      class="barca-logo"
+    />
+    <button class="btn">Tombol!</button>
+    <script>
+      function tampilkanLogo() {
+        alert("Bienvenido al sitio oficial de FC Barcelona!");
+        const logo = document.querySelector(".barca-logo");
+        logo.removeAttribute("hidden");
+      }
+      document.body.onload = tampilkanLogo;
+
+      const tombol = document.getElementsByClassName("btn")[0];
+      tombol.addEventListener("click", function () {
+        alert("Visca Barca");
+      });
+    </script>
+  </body>
+</html>

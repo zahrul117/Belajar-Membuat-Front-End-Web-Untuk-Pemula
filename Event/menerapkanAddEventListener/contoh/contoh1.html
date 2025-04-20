@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #hoverButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: lightblue;
+        border: 2px solid #007bff;
+        cursor: pointer;
+      }
+      #hoverButton:hover {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="hoverButton">Hover Atau Klik aku</button>
+      <h3>Jumlah klik : <span id="clickCount">0</span></h3>
+    </div>
+
+    <script>
+      let clickCount = 0;
+
+      // event untuk menampilkan efek hover
+      function mouseOverEffect() {
+        document.getElementById("hoverButton").innerText =
+          "terima kasih sudah hover button ini";
+      }
+      //   event untuk menghitung jumlah klik
+      function incrementClickCount() {
+        clickCount++;
+        document.getElementById("clickCount").innerText = clickCount;
+        if (clickCount === 7) {
+          alert("anda telah mencapai 7 kali klik");
+        }
+      }
+      // menambahkan event listener
+      const button = document.getElementById("hoverButton");
+      button.addEventListener("mouseover", mouseOverEffect);
+      button.addEventListener("click", incrementClickCount);
+    </script>
+  </body>
+</html>

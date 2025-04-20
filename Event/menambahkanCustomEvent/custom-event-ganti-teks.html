@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Custom Event</title>
+    <style>
+      #btnGanti {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btnGanti">Klik untuk Ganti</button>
+    <p id="pesan"></p>
+
+    <script>
+      // Custom Event
+      const tombolDiklik = new Event("tombolDiklik");
+
+      const btnGanti = document.getElementById("btnGanti");
+      const pesan = document.getElementById("pesan");
+
+      // Pasang event listener custom ke tombol
+      btnGanti.addEventListener("tombolDiklik", function () {
+        btnGanti.textContent = "Sudah Diklik!";
+        document.body.style.backgroundColor = "#f0a500";
+        pesan.textContent = "Event berhasil dipicu! 🎉";
+      });
+
+      // Trigger custom event saat tombol diklik
+      btnGanti.addEventListener("click", function () {
+        btnGanti.dispatchEvent(tombolDiklik);
+      });
+    </script>
+  </body>
+</html>

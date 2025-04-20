@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Gambar</p>
+    <img
+      src="https://www.gramedia.com/blog/content/images/2024/06/65695c5d0e63d.jpeg"
+      alt=""
+      id="gambar"
+    />
+    <button id="sembunyi">Sembunyikan Gambar</button>
+    <button id="tampilkan">Menampilkan Gambar</button>
+
+    <script>
+      const gambar = document.getElementById("gambar");
+      const sembunyi = document.getElementById("sembunyi");
+      const tampilkan = document.getElementById("tampilkan");
+
+      sembunyi.addEventListener("click", function () {
+        gambar.style.display = "none";
+      });
+      tampilkan.addEventListener("click", function () {
+        gambar.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
